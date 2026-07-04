@@ -1,0 +1,125 @@
+# ==========================================================================
+#  .gitignore  —  Python research repository (adapt paths to your project)
+#  Rule of thumb: commit SOURCE and CONFIG; ignore anything GENERATED,
+#  CACHED, SECRET, HEAVY, or MACHINE-SPECIFIC.
+# ==========================================================================
+
+# --- Python bytecode & caches -------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Test / type / lint caches ------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+
+# --- Build / packaging artifacts ----------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+wheels/
+pip-wheel-metadata/
+
+# --- Virtual environments (NEVER commit these) --------------------------
+.venv/
+venv/
+env/
+ENV/
+.conda/
+# conda envs live outside the repo; export environment.yml instead
+
+# --- Environment variables & secrets (CRITICAL) -------------------------
+.env
+.env.*
+!.env.example          # DO commit a sample with placeholder values
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials.*
+service_account*.json
+*_api_key*
+.aws/
+.azure/
+
+# --- Jupyter ------------------------------------------------------------
+.ipynb_checkpoints/
+# Prefer clearing outputs before commit: jupyter nbconvert --clear-output
+
+# --- Machine learning artifacts (heavy; use releases/DVC/Git LFS) -------
+models/*.pt
+models/*.pth
+models/*.ckpt
+models/*.safetensors
+models/*.bin
+models/*.h5
+checkpoints/
+*.onnx
+mlruns/
+wandb/
+.neptune/
+
+# --- Datasets (do NOT commit raw data; document how to obtain it) -------
+data/raw/
+data/interim/
+data/external/
+*.parquet
+*.feather
+# Keep small, licensed sample data under e.g. data/sample/ and force-add it
+
+# --- Generated results / outputs / figures ------------------------------
+results/
+outputs/
+runs/
+logs/
+*.log
+*.tmp
+# Exception: if a figure/table is a committed deliverable, force-add it:
+#   git add -f results/figures/main_result.pdf
+
+# --- LaTeX build artifacts (if the paper lives in the repo) -------------
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.log
+# keep: .tex, .bib, .cls, and the final .pdf if you ship it
+
+# --- Node (only if the repo has a JS/TS component) ----------------------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# --- OS junk ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE / editor settings ----------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+# If you want to SHARE editor config, whitelist specific files instead:
+# !.vscode/settings.json

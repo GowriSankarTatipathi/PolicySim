@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PolicySim IEEE Research Figures</title>
+<style>
+    /* IEEE Academic Paper Styling */
+    body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 40px;
+        line-height: 1.4;
+    }
+    .figure-container {
+        max-width: 900px;
+        margin: 0 auto 80px auto;
+        padding: 20px;
+    }
+    .caption {
+        margin-top: 15px;
+        font-size: 14px;
+        text-align: justify;
+    }
+    .caption strong {
+        font-weight: bold;
+    }
+    .box {
+        border: 1.5px solid #000;
+        padding: 15px;
+        background: #fff;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .dashed-box {
+        border: 1.5px dashed #000;
+        padding: 15px;
+        background: #fafafa;
+        text-align: center;
+    }
+    .title-bar {
+        font-weight: bold;
+        border-bottom: 1px solid #000;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    .inner-node {
+        border: 1px solid #444;
+        padding: 8px;
+        margin: 8px 0;
+        background: #fff;
+        font-size: 13px;
+    }
+    .arrow-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin: 0 15px;
+    }
+    .arrow-down {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    /* Figure 1 Layout */
+    .fig1-layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .fig1-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .fig1-center {
+        flex: 1.5;
+    }
+
+    /* Figure 2 Layout */
+    .fig2-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fig2-main-box {
+        width: 100%;
+        max-width: 600px;
+    }
+    .fig2-layer {
+        border: 1px solid #000;
+        margin-bottom: 15px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .fig2-layer-title {
+        width: 100%;
+        text-align: left;
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+
+    /* Figure 4 Layout */
+    .fig4-layer {
+        border: 1.5px solid #000;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    .fig4-grid {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+    }
+</style>
+</head>
+<body>
+
+    <div class="figure-container">
+        <div class="fig1-layout">
+            <div class="fig1-col">
+                <div class="dashed-box" style="height: 100%;">
+                    <div class="title-bar">Real-World Input</div>
+                    <div class="inner-node"><strong>Public Policy Document</strong><br>Housing, Transit, Health</div>
+                    <div class="arrow-down">&#8595;</div>
+                    <div class="inner-node"><strong>Policy Translator Agent</strong><br>(LLM Parsing)</div>
+                </div>
+            </div>
+
+            <div class="arrow-right">&#8594;</div>
+
+            <div class="fig1-col fig1-center">
+                <div class="box" style="height: 100%; border-width: 2px;">
+                    <div class="title-bar">PolicySim Simulation Environment</div>
+                    <div class="dashed-box">
+                        <strong>Virtual Community Digital Twin</strong>
+                        <div style="display: flex; gap: 10px; margin-top: 15px;">
+                            <div style="flex: 1;">
+                                <div class="inner-node">Synthetic Citizen Agents</div>
+                                <div class="inner-node">Social Network</div>
+                            </div>
+                            <div style="flex: 1;">
+                                <div class="inner-node">Institutions</div>
+                                <div class="inner-node">Economic Variables</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-right">&#8594;</div>
+
+            <div class="fig1-col">
+                <div class="dashed-box" style="height: 100%;">
+                    <div class="title-bar">Simulation Outputs</div>
+                    <div class="inner-node">Social Impact Prediction</div>
+                    <div class="inner-node">Behavioral Changes</div>
+                    <div class="inner-node">Economic Outcomes</div>
+                    <div class="arrow-down">&#8595;</div>
+                    <div class="inner-node" style="border: 2px solid #000;"><strong>Human Policymaker</strong><br><em>(Oversight)</em></div>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <strong>Fig. 1.</strong> PolicySim Overall Research Framework. The system transforms natural-language policy proposals into generative-agent simulations for responsible impact evaluation.
+        </div>
+    </div>
+
+
+    <div class="figure-container">
+        <div class="fig2-layout">
+            <div class="box fig2-main-box">
+                <div class="title-bar" style="font-size: 16px;">Generative Citizen Agent Architecture</div>
+                
+                <div class="fig2-layer">
+                    <div class="fig2-layer-title">Layer 1: Identity & Profile</div>
+                    <div class="inner-node">Demographics</div>
+                    <div class="inner-node">Occupation</div>
+                    <div class="inner-node">Financial Constraints</div>
+                </div>
+
+                <div class="arrow-down">&#8645;</div>
+
+                <div class="fig2-layer">
+                    <div class="fig2-layer-title">Layer 2: Memory System</div>
+                    <div class="inner-node">Episodic Memory</div>
+                    <div class="inner-node">Long-term Memory</div>
+                    <div class="inner-node">Reflection Updates</div>
+                </div>
+
+                <div class="arrow-down">&#8645;</div>
+
+                <div class="fig2-layer">
+                    <div class="fig2-layer-title">Layer 3: Cognitive Engine</div>
+                    <div class="inner-node">LLM Reasoning</div>
+                    <div class="inner-node">Planning</div>
+                    <div class="inner-node">Decision Generation</div>
+                </div>
+
+                <div class="arrow-down">&#8595;</div>
+
+                <div class="fig2-layer">
+                    <div class="fig2-layer-title">Layer 4: Behavior</div>
+                    <div class="inner-node">Actions & Execution</div>
+                    <div class="inner-node">Social Influence & Communication</div>
+                </div>
+            </div>
+        </div>
+        <div class="caption">
+            <strong>Fig. 2.</strong> Generative Citizen Agent Cognitive Architecture. Agents process structural constraints through a continuous loop of observation, memory retrieval, reflection, planning, and action.
+        </div>
+    </div>
+
+
+    <div class="figure-container">
+        <div class="fig4-layer dashed-box">
+            <div class="title-bar">Layer 1: Frontend (Client Interface)</div>
+            <div class="fig4-grid">
+                <div class="inner-node">Next.js Dashboard</div>
+                <div class="inner-node">Policy Input Interface</div>
+                <div class="inner-node">Simulation Visualization</div>
+                <div class="inner-node">Agent Reasoning Inspector</div>
+            </div>
+        </div>
+
+        <div class="arrow-down">&#8645;</div>
+
+        <div class="fig4-layer box">
+            <div class="title-bar">Layer 2: Backend Simulation Engine</div>
+            <div class="fig4-grid">
+                <div class="inner-node">FastAPI Services</div>
+                <div class="inner-node">Global Clock Controller</div>
+                <div class="inner-node">Agent Scheduler</div>
+                <div class="inner-node">Parallel Execution Workers</div>
+            </div>
+        </div>
+
+        <div class="arrow-down">&#8645;</div>
+
+        <div class="fig4-layer dashed-box">
+            <div class="title-bar">Layer 3: AI Infrastructure</div>
+            <div class="fig4-grid" style="flex-wrap: wrap;">
+                <div class="inner-node" style="width: 25%;">LLM Reasoning Engine</div>
+                <div class="inner-node" style="width: 25%;">RAG Knowledge Grounding</div>
+                <div class="inner-node" style="width: 25%;">Vector Database (Memory)</div>
+                <div class="inner-node" style="width: 30%; margin-top: 10px;">Knowledge Graph (Social Network)</div>
+            </div>
+        </div>
+        <div class="caption">
+            <strong>Fig. 3.</strong> PolicySim Technical System Architecture. The framework is strictly decoupled across frontend interfaces, high-concurrency simulation backends, and modular AI infrastructure.
+        </div>
+    </div>
+
+</body>
+</html>
